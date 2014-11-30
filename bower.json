@@ -1,0 +1,23 @@
+{
+  "name": "imageProcessHomework",
+  "main": "index.js",
+  "version": "0.0.1",
+  "authors": [
+    "redhoodsu"
+  ],
+  "description": "Something boring",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "seajs": "~2.3.0",
+    "dat-gui": "~0.5.0",
+    "bootstrap": "~3.3.1"
+  }
+}

@@ -1,0 +1,39 @@
+body {
+    background-color: #555;
+}
+
+canvas {
+    background-color: black;
+    display: block;
+}
+
+.dg.ac {
+    top: 50px !important;
+}
+
+.dg.a {
+    margin-right: 0 !important;
+}
+
+.dg input {
+    font-size: 17px !important;
+    padding-top: 0 !important;
+    line-height: 17px !important;
+}
+
+#canvas {
+    margin: 0 auto;
+    margin-top: 50px;
+    cursor: pointer;
+    max-width: 100%;
+}
+
+#input {
+    display: none;
+}
+
+#target-canvas {
+    margin: 0 auto;
+    margin-top: 0;
+    max-width: 100%;
+}

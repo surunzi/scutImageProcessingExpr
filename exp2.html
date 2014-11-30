@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Image Processing</title>
+<!-- build:[href] ./ -->
+<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+<link rel="stylesheet" href="style.css">
+<!-- /build -->
+<!-- build:[src] ./ -->
+<script src="bower_components/dat-gui/build/dat.gui.min.js"></script>
+<script src="bower_components/seajs/dist/sea.js"></script>
+<!-- /build -->
+</head>
+<body>
+<!-- 导航栏 -->
+<nav class="navbar navbar-default navbar-fixed-top navbar-inverse" role="navigation">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">数字图像处理实验</a>
+    </div>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">实验列表 <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+              <li><a href="index.html">实验一：数字图像读取及色彩、亮度、对比度变化</a></li>
+              <li class="active"><a href="#">实验二：数字图像变换与伽马校正</a></li>
+              <li><a href="exp3.html">实验三：数字图像的噪声去除</a></li>
+              <li><a href="exp4.html">实验四：图像的空间域锐化（拉普拉斯算子）</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- 画布 -->
+<canvas id="canvas" width="500" height="383"></canvas>
+<canvas id="target-canvas" width="500" height="383"></canvas>
+<input id="input" type="file">
+<!-- build:[src] ./ -->
+<script src="bower_components/jquery/dist/jquery.js"></script>
+<script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+<!-- /build -->
+<script>
+seajs.config({
+    base: './'
+});
+seajs.use('exp2.js');
+</script>
+</body>
+</html>
