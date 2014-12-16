@@ -30,11 +30,11 @@
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">实验列表 <span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
-              <li class="active"><a href="#">实验一：数字图像读取及色彩、亮度、对比度变化</a></li>
+              <li><a href="index.html">实验一：数字图像读取及色彩、亮度、对比度变化</a></li>
               <li><a href="exp2.html">实验二：数字图像变换与伽马校正</a></li>
               <li><a href="exp3.html">实验三：数字图像的噪声去除</a></li>
-              <li><a href="exp4.html">实验四：图像的空间域锐化（拉普拉斯算子）</a></li>
-              <li><a href="exp5.html">实验五：频率域低通和高通滤波</a></li>
+              <li><a href="#">实验四：图像的空间域锐化（拉普拉斯算子）</a></li>
+              <li class="active"><a href="exp5.html">实验五：频率域低通和高通滤波</a></li>
               <li><a href="exp6.html">实验六：数字图像复原</a></li>
               <li><a href="exp7.html">实验七：人脸皮肤颜色分层</a></li>
           </ul>
@@ -53,11 +53,11 @@
 <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
 <!-- /build -->
 <script>
-var sample = 'samples/sample1.bmp';
+var sample = 'samples/sample5-1.bmp';
 seajs.config({
     base: './'
 });
-seajs.use('exp1.js');
+seajs.use('exp5.js');
 </script>
 </body>
 </html>

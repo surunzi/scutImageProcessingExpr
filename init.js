@@ -2,6 +2,8 @@ define(function (require, exports, module) {
 
 var util = require('util');
 
+var sample = window.sample || 'sample.jpg';
+
 var $canvas = $('#canvas'),
     canvas = $canvas[0],
     ctx = canvas.getContext('2d');
@@ -206,7 +208,7 @@ function processYuv(cb) {
 
 // 图片载入
 function ready(cb) {
-    loadImage('sample.jpg', cb);
+    loadImage(sample, cb);
 }
 
 // 设置数据

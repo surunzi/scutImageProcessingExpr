@@ -34,6 +34,9 @@
               <li><a href="exp2.html">实验二：数字图像变换与伽马校正</a></li>
               <li><a href="exp3.html">实验三：数字图像的噪声去除</a></li>
               <li class="active"><a href="#">实验四：图像的空间域锐化（拉普拉斯算子）</a></li>
+              <li><a href="exp5.html">实验五：频率域低通和高通滤波</a></li>
+              <li><a href="exp6.html">实验六：数字图像复原</a></li>
+              <li><a href="exp7.html">实验七：人脸皮肤颜色分层</a></li>
           </ul>
         </li>
       </ul>
@@ -42,14 +45,15 @@
 </nav>
 
 <!-- 画布 -->
-<canvas id="canvas" width="500" height="383"></canvas>
-<canvas id="target-canvas" width="500" height="383"></canvas>
+<canvas id="canvas" width="0" height="0"></canvas>
+<canvas id="target-canvas" width="0" height="0"></canvas>
 <input id="input" type="file">
 <!-- build:[src] ./ -->
 <script src="bower_components/jquery/dist/jquery.js"></script>
 <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
 <!-- /build -->
 <script>
+var sample = 'samples/sample4.bmp';
 seajs.config({
     base: './'
 });

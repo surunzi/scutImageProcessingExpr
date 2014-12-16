@@ -12,6 +12,15 @@ grunt.initConfig({
             ]
         }
     },
+    connect: {
+        server: {
+            options: {
+                keepalive: true,
+                hostname: 'localhost',
+                port: 80
+            }
+        }
+    },
     cssmin: {
         dist: {
             files: [                
@@ -67,6 +76,7 @@ grunt.initConfig({
 });
 
 grunt.loadNpmTasks('grunt-contrib-copy');
+grunt.loadNpmTasks('grunt-contrib-connect');
 grunt.loadNpmTasks('grunt-contrib-uglify');
 grunt.loadNpmTasks('grunt-contrib-cssmin');
 grunt.loadNpmTasks('grunt-contrib-htmlmin');
