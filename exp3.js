@@ -1,0 +1,1 @@
+define(function(require){var a=require("init"),b=(require("util"),new dat.GUI);a.ready();var c={N:1,"应用均值滤波器":function(){a.meanFilter(c.N)},N2:1,"应用中值滤波器":function(){a.medianFilter(c.N2)}};b.add(c,"N",1,4).step(1),b.add(c,"应用均值滤波器"),b.add(c,"N2",1,4).step(1),b.add(c,"应用中值滤波器")});

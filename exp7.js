@@ -1,0 +1,1 @@
+define(function(require){{var a=require("init");require("util")}a.ready()});

@@ -1,0 +1,1 @@
+define(function(require){var a=require("init"),b=(require("util"),new dat.GUI);a.ready();var c={"应用拉普拉斯算子":function(){a.laplacian()}};b.add(c,"应用拉普拉斯算子")});
