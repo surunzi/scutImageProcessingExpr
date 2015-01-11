@@ -26,6 +26,18 @@ util.yuvToRgb = function (y, u, v) {
     }
 };
 
+// 将数据转换为灰度图
+util.gray = function (data) {
+    var r, g, b;
+    for (var i = 0, len = data.length; i < len; i += 4) {
+        r = data[i];
+        g = data[i + 1];
+        b = data[i + 2];
+        data[i] = data[i + 1] = data[i + 2] = r * 0.299 + g * 0.587 + b * 0.114;
+    }
+    return data;
+};
+
 // 将图像一维数组转换为二维数组
 util.arrToMap = function (arr, width) {
     var newArr = [],
@@ -75,6 +87,57 @@ util.median = function (arr) {
         return a - b;
     });
     return s[Math.floor((s.length - 1) / 2)];
+};
+
+// 傅立叶变换
+util.dft = function (imgData, w, h) {
+    var r, g, b, angleTerm, cos, sin, finalResult,
+        doublePI = Math.PI * 2,
+        c1 = doublePI / w,
+        c2 = doublePI / h;
+    // 先灰度化
+    imgData = util.gray(imgData);
+    var data = util.arrToMap(imgData, w);
+    for (var y = 0; y < h; y++) {
+        for (var x = 0; x < w; x++) {
+            r = 0;
+            g = 0;
+            b = 0;
+            for (var i = 0; i < w; i++) {
+                angleTerm = -x * i * c1;
+                cos = Math.cos(angleTerm);
+                sin = Math.sin(angleTerm);
+                r += data[y][i]['r'] * Math.sqrt(cos * cos + sin * sin);
+            }
+            console.log(Math.sqrt(cos * cos + sin * sin));
+            finalResult = r / w;
+            data[y][x] = {
+                r: finalResult,
+                g: finalResult,
+                b: finalResult,
+                a: 255
+            };
+        }
+    }
+    /*for (var x = 0; x < w; x++) {
+        for (var y = 0; y < h; y++) {
+            r = 0;
+            g = 0;
+            b = 0;
+            for (var i = 0; i < h; i++) {
+                angleTerm = -y * i * c2;
+                cos = Math.cos(angleTerm);
+                r += data[i][x]['r'] * cos;
+            }
+            data[y][x] = {
+                r: r,
+                g: g,
+                b: b,
+                a: 255
+            }
+        }
+    }*/
+    return util.mapToArr(data);
 };
 
 module.exports = util;

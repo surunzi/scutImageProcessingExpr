@@ -173,6 +173,17 @@ function meanFilter(n) {
     setData(imgData);
 }
 
+// 傅立叶变换
+function dft() {
+    var imgData = getData(),
+        data = imgData.data;
+
+    var newData = util.dft(data, canvas.width, canvas.height);
+
+    imgData.data.set(newData);
+    setData(imgData);
+}
+
 /* 对cb传递r,g,b
  * 将处理后的结果写回canvas中去
  */
@@ -228,6 +239,7 @@ var exports = {
     meanFilter: meanFilter,
     processRgb: processRgb,
     processYuv: processYuv,
+    dft: dft,
     ready: ready,
     setDefaultProcessor: setDefaultProcessor
 };

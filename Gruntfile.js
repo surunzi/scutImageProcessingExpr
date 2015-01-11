@@ -8,6 +8,7 @@ grunt.initConfig({
                 {src: 'bower_components/dat-gui/build/dat.gui.min.js', dest: 'build/dat.gui.min.js'},
                 {src: 'bower_components/bootstrap/dist/js/bootstrap.min.js', dest: 'build/bootstrap.js'},
                 {src: 'sample.jpg', dest: 'build/sample.jpg'},
+                {src: 'samples/**', dest: 'build/'},
                 {src: 'bower_components/bootstrap/dist/css/bootstrap.min.css', dest: 'build/bootstrap.css'}
             ]
         }
@@ -17,7 +18,7 @@ grunt.initConfig({
             options: {
                 keepalive: true,
                 hostname: 'localhost',
-                port: 80
+                port: 8001
             }
         }
     },
@@ -42,7 +43,10 @@ grunt.initConfig({
                 {src: 'exp1.js', dest: 'build/exp1.js'},
                 {src: 'exp2.js', dest: 'build/exp2.js'},
                 {src: 'exp3.js', dest: 'build/exp3.js'},
-                {src: 'exp4.js', dest: 'build/exp4.js'}
+                {src: 'exp4.js', dest: 'build/exp4.js'},
+                {src: 'exp5.js', dest: 'build/exp5.js'},
+                {src: 'exp6.js', dest: 'build/exp6.js'},
+                {src: 'exp7.js', dest: 'build/exp7.js'}
             ]
         }
     },
@@ -52,7 +56,10 @@ grunt.initConfig({
                 {src: 'index.html', dest: 'build/index.html'},
                 {src: 'exp2.html', dest: 'build/exp2.html'},
                 {src: 'exp3.html', dest: 'build/exp3.html'},
-                {src: 'exp4.html', dest: 'build/exp4.html'}
+                {src: 'exp4.html', dest: 'build/exp4.html'},
+                {src: 'exp5.html', dest: 'build/exp5.html'},
+                {src: 'exp6.html', dest: 'build/exp6.html'},
+                {src: 'exp7.html', dest: 'build/exp7.html'}
             ]
         }
     },
